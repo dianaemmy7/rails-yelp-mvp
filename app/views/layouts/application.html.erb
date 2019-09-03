@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <!-- Add these line for detecting device width -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <title>RailsYelpMvp</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -10,6 +13,14 @@
   </head>
 
   <body>
-    <%= yield %>
+    <div class="border-bottom">
+      <div class="container d-flex justify-content-between align-items-center my-3">
+        <p class="links"><%=link_to "Restaurants", restaurants_path %></p>
+        <p class="links"><%=link_to "New Restaurant", new_restaurant_path %></p>
+      </div>
+    </div>
+    <div class="container">
+      <%= yield %>
+    </div>
   </body>
 </html>

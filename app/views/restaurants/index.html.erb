@@ -1,0 +1,7 @@
+<h1>Restaurants</h1>
+<% @restaurants.each do |restaurant| %>
+  <!-- if statement & checkbox image -->
+  <h2><%= link_to restaurant.name, restaurant_path(restaurant) %></h2>
+  <p><%= restaurant.address %></p>
+<% end %>
+
